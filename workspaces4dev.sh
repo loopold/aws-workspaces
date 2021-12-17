@@ -33,7 +33,7 @@ set_zsh() {
   #   exec /bin/zsh
   # fi
   if ! grep -q "export SHELL.*zsh" "${HOME}/.bashrc"; then
-    echo -e "export SHELL=$(which zsh)\n#[ -n \"\$SSH_TTY\" ] && exec \$SHELL\nexec \$SHELL" >> ${HOME}/.bashrc
+    echo -e "export SHELL=$(which zsh)\n[ -n \"\$SSH_TTY\" ] && exec \$SHELL\n#exec \$SHELL" >> ${HOME}/.bashrc
   fi
 }
 
@@ -55,9 +55,9 @@ powerline_fonts_with_agnoster() {
 
   echo "Set a Powerline monospace font"
   # org.mate.interface monospace-font-name 'Roboto Mono for Powerline 10'
-  gsettings set org.mate.interface monospace-font-name "Roboto Mono for Powerline 10"
+  gsettings set org.mate.interface monospace-font-name 'Roboto Mono for Powerline 10'
 
-  echo "Set VSCode to use Powerline Font: 'Roboto Mono for Powerline' > 12"
+  echo -e "\033[7m Please set VSCode to use Powerline Font: 'Roboto Mono for Powerline' > 12 \033[0m"
 
   echo "Set ZSH_THEME theme to agnoster" 
   sed 's/^ZSH_THEME.*/#ZSH_THEME="robbyrussell"\nZSH_THEME="agnoster"/g' -i ${ZSHRC}
@@ -65,7 +65,7 @@ powerline_fonts_with_agnoster() {
   echo "The prompt could be a little shorter"
   # Backslashes for domain environment
   if ! grep -q "^DEFAULT_USER=" ${ZSHRC}; then
-    echo "DEFAULT_USER=$(echo $USERNAME | sed 's/\\/\\\\\\\\/')" >> ${ZSHRC}
+    echo "DEFAULT_USER=$(echo $USER | sed 's/\\/\\\\/')" >> ${ZSHRC}
   fi
   sed 's/%~/%1~/g' -i ${HOME}/.oh-my-zsh/themes/agnoster.zsh-theme
 }
