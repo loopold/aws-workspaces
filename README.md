@@ -25,7 +25,7 @@ AWS profile information, Git repo info, ZSH interactive history search...
 
 Get the script
 ```sh
-curl -L https://raw.githubusercontent.com/loopold/aws-workspaces/workspaces4dev.sh
+curl -oL https://raw.githubusercontent.com/loopold/aws-workspaces/master/workspaces4dev.sh
 ```
 If you are absolutely sure run it with `set` parameter. Without the parameter,
 you'll receive info about the system changes that the script will make.
