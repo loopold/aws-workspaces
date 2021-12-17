@@ -55,9 +55,9 @@ powerline_fonts_with_agnoster() {
 
   echo "Set a Powerline monospace font"
   # org.mate.interface monospace-font-name 'Roboto Mono for Powerline 10'
-  gsettings set org.mate.interface monospace-font-name "Roboto Mono for Powerline 10"
+  gsettings set org.mate.interface monospace-font-name 'Roboto Mono for Powerline 10'
 
-  echo "Set VSCode to use Powerline Font: 'Roboto Mono for Powerline' > 12"
+  echo -e "\033[7m Please set VSCode to use Powerline Font: 'Roboto Mono for Powerline' > 12 \033[0m"
 
   echo "Set ZSH_THEME theme to agnoster" 
   sed 's/^ZSH_THEME.*/#ZSH_THEME="robbyrussell"\nZSH_THEME="agnoster"/g' -i ${ZSHRC}
