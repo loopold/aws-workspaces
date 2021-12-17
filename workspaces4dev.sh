@@ -33,7 +33,7 @@ set_zsh() {
   #   exec /bin/zsh
   # fi
   if ! grep -q "export SHELL.*zsh" "${HOME}/.bashrc"; then
-    echo -e "export SHELL=$(which zsh)\n#[ -n \"\$SSH_TTY\" ] && exec \$SHELL\nexec \$SHELL" >> ${HOME}/.bashrc
+    echo -e "export SHELL=$(which zsh)\n[ -n \"\$SSH_TTY\" ] && exec \$SHELL\n#exec \$SHELL" >> ${HOME}/.bashrc
   fi
 }
 

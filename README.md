@@ -30,6 +30,7 @@ curl -OL https://raw.githubusercontent.com/loopold/aws-workspaces/master/workspa
 If you are absolutely sure run it with `set` parameter. Without the parameter,
 you'll receive info about the system changes that the script will make.
 ```sh
+chmod +x workspaces4dev.sh
 /workspaces4dev.sh set
 ```
 
