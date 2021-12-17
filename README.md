@@ -22,7 +22,6 @@ Such as AWS profile information, Git repo info, ZSH interactive history search..
 
 
 ## Usage
-
 Get the script
 ```sh
 curl -OL https://raw.githubusercontent.com/loopold/aws-workspaces/master/workspaces4dev.sh
@@ -33,5 +32,19 @@ you'll receive info about the system changes that the script will make.
 chmod +x workspaces4dev.sh
 /workspaces4dev.sh set
 ```
+
+## Post-config
+I strongly suggest changing Mate theme to Arc-Dark (`Control Center` > `Look and Feel` > 
+`Apperance`). It seems my `gsettings` command in the script is not doing its job yet.
+
+Please set VSCode to use Powerline Font: 'Roboto Mono for Powerline'. Size 12.
+Set it in app preferences or put code below into the file `~/.config/Code/User/settings.json`
+```json
+{
+    "editor.fontFamily": "'Roboto Mono for Powerline'",
+    "editor.fontSize": 12
+}
+```
+
 
 [screen]: ./workspaces-screen.png

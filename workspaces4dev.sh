@@ -65,7 +65,7 @@ powerline_fonts_with_agnoster() {
   echo "The prompt could be a little shorter"
   # Backslashes for domain environment
   if ! grep -q "^DEFAULT_USER=" ${ZSHRC}; then
-    echo "DEFAULT_USER=$(echo $USERNAME | sed 's/\\/\\\\\\\\/')" >> ${ZSHRC}
+    echo "DEFAULT_USER=$(echo $USER | sed 's/\\/\\\\/')" >> ${ZSHRC}
   fi
   sed 's/%~/%1~/g' -i ${HOME}/.oh-my-zsh/themes/agnoster.zsh-theme
 }
