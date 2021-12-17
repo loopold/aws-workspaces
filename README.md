@@ -15,8 +15,8 @@ Is is a early development version (still testing).
 
 
 ## Feel
-Look into embedded terminal. Minimal prompt wit maximum useful things. Such as 
-AWS profile information, Git repo info, ZSH interactive history search...
+Take a look at the embedded terminal. Minimal prompt with maximum useful things. 
+Such as AWS profile information, Git repo info, ZSH interactive history search...
 
 ![screen]
 
@@ -25,7 +25,7 @@ AWS profile information, Git repo info, ZSH interactive history search...
 
 Get the script
 ```sh
-curl -oL https://raw.githubusercontent.com/loopold/aws-workspaces/master/workspaces4dev.sh
+curl -OL https://raw.githubusercontent.com/loopold/aws-workspaces/master/workspaces4dev.sh
 ```
 If you are absolutely sure run it with `set` parameter. Without the parameter,
 you'll receive info about the system changes that the script will make.
