@@ -30,7 +30,7 @@ If you are absolutely sure run it with `set` parameter. Without the parameter,
 you'll receive info about the system changes that the script will make.
 ```sh
 chmod +x workspaces4dev.sh
-/workspaces4dev.sh set
+./workspaces4dev.sh set
 ```
 
 ## Post-config
